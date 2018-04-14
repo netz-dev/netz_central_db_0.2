@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Crm Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client company</th>
+      <th>Title</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone number</th>
+      <th>Mobile number</th>
+      <th>Branch location</th>
+      <th>Contact level</th>
+      <th>Industry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @crm_clients.each do |crm_client| %>
+      <tr>
+        <td><%= crm_client.client_company %></td>
+        <td><%= crm_client.title %></td>
+        <td><%= crm_client.first_name %></td>
+        <td><%= crm_client.last_name %></td>
+        <td><%= crm_client.email %></td>
+        <td><%= crm_client.phone_number %></td>
+        <td><%= crm_client.mobile_number %></td>
+        <td><%= crm_client.branch_location %></td>
+        <td><%= crm_client.contact_level %></td>
+        <td><%= crm_client.industry %></td>
+        <td><%= link_to 'Show', crm_client %></td>
+        <td><%= link_to 'Edit', edit_crm_client_path(crm_client) %></td>
+        <td><%= link_to 'Destroy', crm_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Crm Client', new_crm_client_path %>

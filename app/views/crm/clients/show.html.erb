@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client company:</strong>
+  <%= @crm_client.client_company %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @crm_client.title %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @crm_client.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @crm_client.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @crm_client.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @crm_client.phone_number %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @crm_client.mobile_number %>
+</p>
+
+<p>
+  <strong>Branch location:</strong>
+  <%= @crm_client.branch_location %>
+</p>
+
+<p>
+  <strong>Contact level:</strong>
+  <%= @crm_client.contact_level %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @crm_client.industry %>
+</p>
+
+<%= link_to 'Edit', edit_crm_client_path(@crm_client) %> |
+<%= link_to 'Back', crm_clients_path %>

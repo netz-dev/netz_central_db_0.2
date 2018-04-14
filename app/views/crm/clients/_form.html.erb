@@ -1,0 +1,22 @@
+
+<%= simple_form_for(@crm_client) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :client_company %>
+    <%= f.input :title %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :phone_number %>
+    <%= f.input :mobile_number %>
+    <%= f.input :branch_location %>
+    <%= f.input :contact_level %>
+    <%= f.input :industry %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
